@@ -1,0 +1,371 @@
+noun;Air;Воздух
+noun;Wind;Ветер
+noun;Water;Вода
+noun;West;Запад
+noun;East;Восток
+noun;North;Север
+noun;South;Юг
+noun;Tree;Дерево
+noun;Sea;Море
+noun;Ocean;Океан
+noun;Rock;Скала
+noun;Plant;Растение
+noun;Flower;Цветок
+noun;Forest;Лес
+noun;Person;Личность
+noun;Night;Ночь
+noun;Morning;Утро
+noun;Day;День
+noun;Evening;Вечер
+noun;Life;Жизнь
+noun;Mountain;Гора
+noun;Land;Земля
+noun;House;Дом
+noun;Fire;Огонь
+noun;Country;Страна
+noun;Animal;Животное
+noun;Bird;Птица
+noun;Fish;Рыба
+noun;Insect;Насекомое
+noun;City;Город
+noun;World;Мир
+noun;Boy;Мальчик
+noun;Girl;Девочка
+noun;Mother;Мама
+noun;Father;Отец
+noun;Son;Сын
+noun;Daughter;Дочь
+noun;Baby;Малыш
+noun;Family;Семья
+noun;Grandmother;Бабушка
+noun;Grandfather;Дедушка
+noun;Children;Дети
+noun;Home;Дом
+noun;Love;Любовь
+noun;Apartment;Квартира
+noun;Joy;Радость
+noun;Nephew;Племянник
+noun;Aunt;Тетя
+noun;Uncle;Дядя
+noun;Man;Мужчина
+noun;Woman;Женщина
+noun;Child;Ребенок
+noun;Sister;Сестра
+noun;Brother;Брат
+noun;Relatives;Родственники
+noun;Friend;Друг
+noun;Wife;Жена
+noun;Husband;Муж
+noun;Address;Адрес
+noun;Happiness;Счастье
+noun;People;Люди
+noun;Phone;Телефон
+noun;Question;Вопрос
+noun;Place;Место
+noun;Market;Рынок
+noun;Order;Заказ
+noun;Food;Еда
+noun;Work;Работа
+noun;Communication;Общение
+noun;Story;История
+noun;Relax;Отдых
+noun;Time;Время
+noun;Word;Слово
+noun;Dialogue;Диалог
+noun;Meeting;Встреча
+noun;Week;Неделя
+noun;Distance;Дистанция
+noun;Club;Клуб
+noun;Theatre;Театр
+noun;Cinema;Кинотеатр
+noun;Coffee shop;Кофейня
+noun;Friendship;Дружба
+noun;Behavior;Поведение
+noun;Attitude;Отношение
+noun;Student;Студент
+noun;University;Университет
+noun;Union;Объединение
+noun;Party;Вечеринка
+noun;Date;Свидание
+noun;Leisure Time;Досуг
+noun;Road;Дорога
+noun;Ticket;Билет
+noun;Map;Карта
+noun;Motel;Мотель
+noun;Highway;Шоссе
+noun;Wallet;Бумажник
+noun;Bank;Банк
+noun;Subway;Метро
+noun;Cab;Такси
+noun;Parking;Парковка
+noun;Food order;Заказ еды
+noun;Cash;Наличные
+noun;Passport;Паспорт
+noun;Permission;Разрешение
+noun;Lawyer;Адвокат
+noun;Problem;Проблема
+noun;Transfer;Пересадка
+noun;Bag;Сумка
+noun;Suitcase;Чемодан
+noun;Property;Имущество
+noun;Law;Право, закон
+noun;Police Station;Полицейский участок
+noun;Price;Стоимость
+noun;Price-list;Ценник
+noun;Courier;Курьер
+noun;Delivery;Доставка
+noun;Location;Местоположение
+noun;Route;Маршрут
+noun;Agreement;Договор
+noun;Hospital;Больница
+noun;Ambulance;Скорая помощь
+verb;to Be;Быть
+verb;to Do;Делать
+verb;to Feel;Чувствовать
+verb;to See;Видеть
+verb;to Hear;Слышать
+verb;to Run;Бежать
+verb;to Get;Получать
+verb;to Make;Сделать
+verb;to Cook;Готовить
+verb;to Sing;Петь
+verb;to Speak;Разговаривать
+verb;to Say;Говорить
+verb;to Tell;Рассказывать
+verb;to Take;Брать
+verb;to Sit;Садиться
+verb;to Stand;Стоять
+verb;to Laugh;Смеяться
+verb;to Smile;Улыбаться
+verb;to Open;Открывать
+verb;to Close;Закрывать
+verb;to Love;Любить
+verb;to Like;Нравиться
+verb;to Give;Давать
+verb;to Bring;Приносить
+verb;to Breath;Дышать
+verb;to Buy;Покупать
+verb;to Sell;Продавать
+verb;to Forget;Забывать
+verb;to Believe;Верить
+verb;to Have;Иметь
+verb;to Go;Идти
+verb;to Know;Знать
+verb;to Think;Думать
+verb;to Come;Приходить
+verb;to Want;Хотеть
+verb;to Use;Использовать
+verb;to Find;Находить
+verb;to Work;Работать
+verb;to Eat;Есть
+verb;to Drink;Пить
+verb;to Write;Писать
+verb;to Read;Читать
+verb;to Call;Звонить
+verb;to Try;Пытаться
+verb;to Need;Нуждаться
+verb;to Become;Становиться
+verb;to Put;Класть
+verb;to Leave;Оставлять
+verb;to Pay;Платить
+verb;to Play;Играть
+verb;to Pray;Молиться
+verb;to Stay;Оставаться
+verb;to Mean;Означать
+verb;to Keep;Держать
+verb;to Let;Оставлять
+verb;to Begin;Начинать
+verb;to Start;Стартовать
+verb;to Finish;Заканчивать
+verb;to Help;Помогать
+verb;to Show;Показывать
+verb;to Cry;Плакать
+verb;to Move;Двигаться
+verb;to Jump;Прыгать
+verb;to Live;Жить
+verb;to Die;Умирать
+verb;to Happen;Случаться
+verb;to Lose;Проигрывать
+verb;to Hate;Ненавидеть
+verb;to Turn on;Включать
+verb;to Turn off;Выключать
+verb;to Continue;Продолжать
+verb;to Change;Менять
+verb;to Wash;Мыть
+verb;to Clean;Очищать
+verb;to Lead;Вести
+verb;to Understand;Понимать
+verb;to Watch;Смотреть
+verb;to Discover;Исследовать
+verb;to Imagine;Представлять
+verb;to Introduce;Представить
+verb;to Follow;Следовать
+verb;to Create;Создавать
+verb;to Grow;Расти
+verb;to Spend;Тратить
+verb;to Win;Выигрывать
+verb;to Offer;Предлагать
+verb;to Learn;Изучать
+verb;to Appear;Появляться
+verb;to Disappear;Исчезать
+verb;to Build;Строить
+verb;to Break;Ломать
+verb;to Send;Посылать
+verb;to Fall;Падать
+verb;to Cut;Резать
+verb;to Achieve;Достигать
+verb;to Communicate;Общаться
+verb;to Kill;Убивать
+verb;to Pass;Проходить
+verb;to Fly;Летать
+verb;to Swim;Плавать
+verb;to Decide;Решать
+verb;to Return;Возвращаться
+verb;to Hope;Надеяться
+verb;to Explain;Объяснять
+verb;to Propose;Предлагать
+verb;to Develop;Развивать
+verb;to Support;Поддерживать
+verb;to Dance;Танцевать
+verb;to Draw;Рисовать
+verb;to Book;Бронировать
+verb;to Be afraid;Бояться
+verb;to Agree;Соглашаться
+verb;to Check up;Проверять
+verb;to Delete;Удалять
+verb;to Choose;Выбирать
+verb;to Catch;Ловить
+verb;to Ask;Спрашивать
+verb;to Answer;Отвечать
+verb;to Hesitate;Cомневаться
+adjective;Afraid;Напуганный
+adjective;Angry;Сердитый
+adjective;Asleep;Спящий
+adjective;Attentive;Внимательный
+adjective;Available;Доступный
+adjective;Basic;Базовый
+adjective;Beautiful;Красивый
+adjective;Big;Большой
+adjective;Brave;Смелый
+adjective;Busy;Занятой
+adjective;Calm;Спокойный
+adjective;Careful;Внимательный
+adjective;Cheap;Дешевый
+adjective;Clean;Чистый
+adjective;Clever;Умный
+adjective;Cold;Холодный
+adjective;Comfortable;Комфортный
+adjective;Confident;Уверенный
+adjective;Constant;Постоянный
+adjective;Curious;Любопытный
+adjective;Dangerous;Опасный
+adjective;Dark;Темный
+adjective;Deep;Глубокий
+adjective;Different;Разный
+adjective;Difficult;Трудный
+adjective;Dirty;Грязный
+adjective;Easy;Легкий
+adjective;Every;Каждый
+adjective;Expensive;Дорогой
+adjective;Exact;Точный
+adjective;Fast;Быстрый
+adjective;Fair;Честный
+adjective;Fine;Замечательный
+adjective;Foreign;Иностранный
+adjective;Free;Свободный
+adjective;Fresh;Свежий
+adjective;Full;Полный
+adjective;Funny;Забавный
+adjective;Guilty;Виновный
+adjective;Healthy;Здоровый
+adjective;Hard;Тяжелый
+adjective;Helpful;Полезный
+adjective;Honest;Честный
+adjective;Hot;Горячий
+adjective;Hungry;Голодный
+adjective;Important;Важный
+adjective;Illegal;Незаконный
+adjective;Impossible;Невозможный
+adjective;Independent;Независимый
+adjective;Interesting;Интересный
+adjective;Kind;Добрый
+adjective;Legal;Законный
+adjective;Little;Маленький
+adjective;Lucky;Удачливый
+adjective;Necessary;Необходимый
+adjective;Normal;Нормальный
+adjective;Old;Старый
+adjective;Opposite;Противоположный
+adjective;Perfect;Идеальный
+adjective;Poor;Бедный
+adjective;Powerful;Мощный
+adjective;Possible;Возможный
+adjective;Quiet;Тихий
+adjective;Rare;Редкий
+adjective;Recent;Недавний
+adjective;Relevant;Актуальный
+adjective;Remote;Удаленный
+adjective;Safe;Безопасный
+adjective;Short;Короткий
+adjective;Small;Маленький
+adjective;Strange;Странный
+adjective;Successful;Успешный
+adjective;Tasty;Вкусный
+adjective;Terrible;Жуткий
+adjective;Tired;Усталый
+adjective;Warm;Теплый
+adjective;Weak;Слабый
+adjective;Responsible;Ответственный
+adjective;Sad;Грустный
+adjective;International;Международный
+adverb;Together;Вместе
+adverb;According;В соответствии
+adverb;Again;Снова
+adverb;Always;Всегда
+adverb;Beautifully;Красиво
+adverb;Carefully;Осторожно
+adverb;Correctly;Верно
+adverb;Especially;Особенно
+adverb;Friendly;Дружелюбно
+adverb;Indeed;Действительно
+adverb;Above;Выше
+adverb;Accidentally;Случайно
+adverb;Actually;На самом деле
+adverb;Badly;Плохо
+adverb;Besides;Помимо этого
+adverb;Briefly;Кратко
+adverb;Certainly;Конечно
+adverb;Daily;Ежедневно
+adverb;Dreamily;Мечтательно
+adverb;Even;Даже
+adverb;Eventually;В конце концов
+adverb;Foolishly;Глупо
+adverb;Forward;Вперед
+adverb;Ever;Когда-либо
+adverb;Equally;Одинаково
+adverb;Fortunately;К счастью
+adverb;Honestly;Честно
+adverb;Instead;Вместо
+adverb;Inside;Внутри
+adverb;Also;Также
+adverb;Hardly;С трудом
+adverb;Lately;Недавно
+adverb;Less;Меньше
+adverb;Loudly;Громко
+adverb;Nearly;Около
+adverb;Never;Никогда
+adverb;Only;Только
+adverb;Once;Один раз
+adverb;Often;Часто
+adverb;Perhaps;Возможно
+adverb;Quickly;Быстро
+adverb;Probably;Вероятно
+adverb;Rarely;Редко
+adverb;Really;Действительно
+adverb;Sometimes;Иногда
+adverb;Yesterday;Вчера
+adverb;Thus;Таким образом
+adverb;Somehow;Как-то
+adverb;Soon;Скоро
+adverb;Regularly;Регулярно
+adverb;Somewhere;Где-то
