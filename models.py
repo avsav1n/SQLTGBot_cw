@@ -1,6 +1,7 @@
 '''
 Модуль описания моделей таблиц,
-а также подготовки базы данных к работе с ней: создание таблиц, их заполнение
+а также подготовки базы данных к работе с ней: создание таблиц, их заполнение.
+
 '''
 import os
 
@@ -9,7 +10,8 @@ from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 from config import *
 
 class DBaseConfig:
-    '''Класс подключения к базе данных
+    '''Класс подготовки базы данных к работе.
+
     '''
     Base = declarative_base()
     DSN = f'{DB_DRIVER}://{DB_LOGIN}:{DB_PASSWORD}@{DB_CONNECTION}:{DB_PORT}/{DB_NAME}'
@@ -18,20 +20,23 @@ class DBaseConfig:
 
     @staticmethod
     def create_table(engine):
-        '''Функция создания таблиц, по описанным моделям
+        '''Функция создания таблиц, по описанным моделям.
+
         '''
         DBaseConfig.Base.metadata.create_all(engine)
 
     @staticmethod
     def delete_table(engine):
-        '''Функция удаления всех созданных таблиц
+        '''Функция удаления всех созданных таблиц.
+
         '''
         DBaseConfig.Base.metadata.drop_all(engine)
 
     @staticmethod
     def filling_out_type():
-        '''Функция заполнения таблицы "type"
-           Заполнение осуществляется данными из кортежа types
+        '''Функция заполнения таблицы "type".
+           Заполнение осуществляется данными из кортежа types.
+
         '''
         types = ('verb', 'noun', 'adjective', 'adverb', 'pronoun', 'numeral')
         with DBaseConfig.Session() as session:
@@ -42,9 +47,10 @@ class DBaseConfig:
 
     @staticmethod
     def filling_out_word():
-        '''Функция заполнения таблицы "word"
+        '''Функция заполнения таблицы "word".
            Заполнение осуществляется данными из .txt файла, 
-           формата: 'часть речи';'слово';'перевод'
+           формата: 'часть речи';'слово';'перевод'.
+
         '''
         file_path = os.path.join(os.getcwd(), 'data', 'all_words.txt')
         with open(file_path, encoding='utf-8') as file:
@@ -53,18 +59,18 @@ class DBaseConfig:
             types = session.query(Type.id_type, Type.title).all()
             types = {title: id_type for id_type, title in types}
             for line in data:
-                id_type, title, translation = line.strip().split(';')
+                id_type, title, translation = line.rstrip().split(';')
                 model = Word(id_type=types[id_type] , title=title, translation=translation)
                 session.add(model)
             session.commit()
 
 
 class Type(DBaseConfig.Base):
-    '''Модель таблицы "type"
+    '''Модель таблицы "type".
 
        Хранит идентификатор и часть речи, 
        к которому принадлежит слово из таблицы "word" (глагол, существительное...)
-       По принципу "один ко многим" связана с "word"
+       По принципу "один ко многим" связана с "word".
 
     '''
     __tablename__ = 'type'
@@ -98,15 +104,15 @@ class Word(DBaseConfig.Base):
 class User(DBaseConfig.Base):
     '''Модель таблицы "user"
 
-       Хранит идентификатор и ID чата пользователя, 
-       для дальнейшего взаимодействия с ним
+       Хранит идентификатор, ID чата пользователя и язык отображения карточек.
+       По принципу "один ко многим" связана с "study".
 
     '''
     __tablename__ = 'user'
 
     id_user = sqla.Column(sqla.Integer, primary_key=True)
     id_chat = sqla.Column(sqla.BigInteger, unique=True, nullable=False)
-    type_cards = sqla.Column(sqla.String(10), nullable=False)
+    language = sqla.Column(sqla.String(10), nullable=False)
 
     study = relationship('Study', back_populates='user')
 
@@ -114,9 +120,8 @@ class User(DBaseConfig.Base):
 class Study(DBaseConfig.Base):
     '''Модель таблицы "study"
 
-       Хранит идентификатор, дату добавления слова (для повторения),
-       ссылку на пользователя и ссылку на слова,
-       которые в настоящий момент он изучает (личное хранилище)
+       Хранит идентификатор, дату добавления слова,
+       ID пользователя и ID слова, которые в настоящий момент он изучает.
        По принципу "один ко многим" связана с "word"
        По принципу "один ко многим" связана с "users"
 
@@ -130,3 +135,11 @@ class Study(DBaseConfig.Base):
 
     word = relationship('Word', back_populates='study')
     user = relationship('User', back_populates='study')
+
+# Для создания таблиц по вышеописанным моделям и заполнения их данными,
+# необходимо раскомментировать и запустить код ниже.
+
+# if __name__ == '__main__':
+#     DBaseConfig.create_table(DBaseConfig.engine)
+#     DBaseConfig.filling_out_type()
+#     DBaseConfig.filling_out_word()
