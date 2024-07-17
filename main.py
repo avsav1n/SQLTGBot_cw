@@ -440,7 +440,7 @@ class Telebot:
             'или просто используйте кнопки \U0001F447'
             )
 
-        url = 'https://github.com/avsav1n/SQLTGBot_cw'
+        url = 'https://github.com/avsav1n/Telebot_cw'
         markup_inl = types.InlineKeyboardMarkup()
         markup_inl.add(types.InlineKeyboardButton('Репозиторий в GitHub \U0001F40D', url=url))
 
