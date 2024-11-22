@@ -8,12 +8,12 @@ from time import sleep
 
 from schedule import repeat, run_pending, every
 from telebot import types, TeleBot
-from sqlalchemy import distinct
+from sqlalchemy import distinct, func
 
 from models import DBaseConfig, Study, User
 from config import TGBOT_TOKEN
 
-def check_in():
+def check_in() -> list:
     '''Функция выборки информации о пользователях (chat_id).
        Выборка осуществляется по дате ('date') таблицы "study": дата меньше текущей.
        Возвращает список идентификаторов чата: [chat_id, chat_id,...]
@@ -21,12 +21,11 @@ def check_in():
     '''
     with DBaseConfig.Session() as session:
         query = session.query(Study).with_entities(distinct(User.id_chat))\
-                        .join(User.study).filter(Study.date < date.today()).all()
-    if query:
-        return [chat_id[0] for chat_id in query]
+                        .join(User.study).filter(Study.date < date.today()).group_by.all()
+    return [chat_id[0] for chat_id in query] if query else None
 
 
-def activate_notifications():
+def activate_notifications() -> None:
     '''Функция рассылки уведомлений о повторении слов, 
        находящиеся в персональном списке пользователя и
        соответствующие условию: добавлены в персональный список ранее текущей даты.
@@ -64,5 +63,5 @@ if __name__ == '__main__':
         while True:
             run_pending()
             sleep(1)
-    except KeyboardInterrupt:
+    finally:
         print('Notifications stopped.')

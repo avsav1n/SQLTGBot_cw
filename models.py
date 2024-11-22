@@ -4,17 +4,21 @@
 
 '''
 import os
+import sqlite3
 
 import sqlalchemy as sqla
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
+
 from config import *
+
 
 class DBaseConfig:
     '''Класс подготовки базы данных к работе.
 
     '''
     Base = declarative_base()
-    DSN = f'{DB_DRIVER}://{DB_LOGIN}:{DB_PASSWORD}@{DB_CONNECTION}:{DB_PORT}/{DB_NAME}'
+    # DSN = f'{DB_DRIVER}://{DB_LOGIN}:{DB_PASSWORD}@{DB_CONNECTION}:{DB_PORT}/{DB_NAME}'
+    DSN = f'sqlite:///sqlite3.db'
     engine = sqla.create_engine(DSN)
     Session = sessionmaker(engine)
 
@@ -140,6 +144,7 @@ class Study(DBaseConfig.Base):
 # необходимо раскомментировать и запустить код ниже.
 
 # if __name__ == '__main__':
-#     DBaseConfig.create_table(DBaseConfig.engine)
-#     DBaseConfig.filling_out_type()
-#     DBaseConfig.filling_out_word()
+    # sqlite3.connect('sqlite3.db').close()
+    # DBaseConfig.create_table(DBaseConfig.engine)
+    # DBaseConfig.filling_out_type()
+    # DBaseConfig.filling_out_word()

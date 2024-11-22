@@ -3,17 +3,17 @@
 и его взаимодействия с базой данных PostgreSQL.
 
 '''
-from random import shuffle, choice, sample, randint
 from datetime import date, timedelta
+from functools import lru_cache
+from random import choice, randint, sample, shuffle
 
-from telebot import types, TeleBot
-from telebot.storage import StateMemoryStorage
-from telebot.handler_backends import State, StatesGroup
 from sqlalchemy import distinct
+from telebot import TeleBot, types
+from telebot.handler_backends import State, StatesGroup
+from telebot.storage import StateMemoryStorage
 
-from models import Word, Study, User, DBaseConfig
 from config import TGBOT_TOKEN
-from cash_func import cash_func
+from models import DBaseConfig, Study, User, Word
 
 # BACKEND_INFO - оперативный словарь.
 # Хранит информацию о количестве частей речи, находящихся в базе данных (для подготовки карточек)
@@ -28,7 +28,7 @@ class DBase:
        Для взаимодействия с базой данных необходимо в файл .config ввести параметры подключения.
        
     '''
-    @cash_func
+    @lru_cache(maxsize=32)
     @staticmethod
     def _pulling_info_word_id(word: str, chat_id: int) -> int:
         '''Функция выборки идентификатора слова (id_word) из таблицы "word".
@@ -41,7 +41,7 @@ class DBase:
             session.query(Word).filter(Word.translation == word).first().id_word
             )
 
-    @cash_func
+    @lru_cache(maxsize=32)
     @staticmethod
     def _pulling_info_user_id(chat_id: int) -> int:
         '''Функция выборки идентификатора пользователя (id_user) из таблицы "user".
@@ -423,7 +423,7 @@ class Telebot:
 
     @staticmethod
     @bot.message_handler(commands=['start'])
-    def greeting(message) -> None:
+    def show_greeting(message) -> None:
         '''Функция-обработчик команды /start.
            Выполняет регистрацию, возвращает в чат приветствие пользователя.
 
@@ -454,7 +454,7 @@ class Telebot:
 
     @staticmethod
     @bot.message_handler(commands=['help'])
-    def help(message) -> None:
+    def show_help(message) -> None:
         '''Функция-обработчик команды /help.
            Возвращает в чат информацию о функционале Telegram-бота.
 
